@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub Profile Viewer</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+            <header>
+                <div class="header-dot"></div>
+                <div class="header-title">github_viewer.<span>js</span> &nbsp;—&nbsp; API Integration · Synent Task 6</div>
+            </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Search -->
+    <div class="search-section">
+      <label class="search-label" for="username-input">// Enter a GitHub username</label>
+      <div class="search-row">
+        <input
+          class="search-input"
+          id="username-input"
+          type="text"
+          placeholder="e.g. DuDu21cs"
+          value="DuDu21cs"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button class="search-btn" id="search-btn" onclick="fetchProfile()">Fetch Profil</button>
+      </div>
+    </div>
+
+    <!-- Error -->
+    <div class="error-box" id="error-box">
+      <span class="error-icon">⚠️</span>
+      <span class="error-msg" id="error-msg">Something went wrong.</span>
+    </div>
+
+    <!-- Loading -->
+    <div class="state-box" id="loading-state">
+      <div class="spinner"></div>
+      <div class="state-title">Fetching profile...</div>
+      <div class="state-sub">Connecting to GitHub API</div>
+    </div>
+
+    <!-- Empty state -->
+    <div class="state-box visible" id="empty-state">
+      <div class="state-icon">🔍</div>
+      <div class="state-title">Search for a GitHub user</div>
+      <div class="state-sub">Enter a username above and click Fetch Profile</div>
+    </div>
+
+    <!-- Result -->
+    <div id="result">
+
+      <!-- Profile Card -->
+      <div class="profile-card">
+        <div class="profile-top">
+          <img class="profile-avatar" id="avatar" src="" alt="avatar" />
+          <div class="profile-info">
+            <div class="profile-name" id="name"></div>
+            <div class="profile-login" id="login"></div>
+            <div class="profile-bio" id="bio"></div>
+            <div class="profile-meta" id="meta"></div>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div class="stat-cell">
+            <span class="stat-cell-num" id="stat-repos">—</span>
+            <span class="stat-cell-lbl">Repos</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell-num" id="stat-followers">—</span>
+            <span class="stat-cell-lbl">Followers</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell-num" id="stat-following">—</span>
+            <span class="stat-cell-lbl">Following</span>
+          </div>
+          <div class="stat-cell">
+            <span class="stat-cell-num" id="stat-gists">—</span>
+            <span class="stat-cell-lbl">Gists</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repos -->
+      <div class="repos-label">
+        // Latest Repositories
+        <span class="repos-count" id="repos-count"></span>
+      </div>
+      <div class="repos-grid" id="repos-grid"></div>
+
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    Powered by <span>GitHub REST API v3</span> &nbsp;·&nbsp; Built by <span>Duresa Chemeda</span> &nbsp;·&nbsp; Synent Internship Task 6
+  </footer>
+
+  <script src="index.js"></script>
+
+</body>
+</html>
