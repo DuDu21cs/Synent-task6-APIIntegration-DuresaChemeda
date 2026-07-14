@@ -408,3 +408,18 @@ footer span { color: var(--accent); }
   .search-row { flex-direction: column; }
   .search-btn { width: 100%; }
 }
+/* Text selection color */
+::selection {
+  background: var(--accent-2);
+  color: var(--accent);
+}
+
+/* Avatar hover effect */
+.profile-avatar {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
+}
