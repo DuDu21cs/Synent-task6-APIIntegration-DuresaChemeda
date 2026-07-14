@@ -423,3 +423,32 @@ footer span { color: var(--accent); }
   transform: scale(1.05);
   box-shadow: 0 4px 20px rgba(37, 99, 235, 0.15);
 }
+
+/* Header shadow */
+header {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Repo card click press effect */
+.repo-card:active {
+  transform: translateY(0px) scale(0.99);
+}
+
+/* Search button press effect */
+.search-btn:active {
+  transform: scale(0.98);
+}
+
+/* Smooth error box fade in */
+.error-box.visible {
+  animation: fadeIn 0.3s ease;
+}
+
+.state-box.visible {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
