@@ -80,6 +80,10 @@ open index.html
 
 ---
 
+**Live Demo**
+
+ [demo](https://dudu21cs.github.io/Synent-task6-APIIntegration-DuresaChemeda/)
+
 ## 👤 Author
 
 **Duresa Chemeda**
