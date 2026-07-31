@@ -20,6 +20,9 @@ Fetches live data from the **GitHub REST API** and displays it dynamically with 
 - 🚀 Auto-fetches `DuDu21cs` profile on page load
 
 ---
+## Preview
+
+[Live demo](https://dudu21cs.github.io/Synent-task6-APIIntegration-DuresaChemeda/)
 
 ## 🛠️ Built With
 
